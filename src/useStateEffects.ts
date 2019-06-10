@@ -31,8 +31,10 @@ function useStateEffects<S>(initialState: S): [S, Update<S>] {
 
   React.useEffect(() => {
     if (effects.length > 0) {
-      effects.forEach(fx => fx());
-      setState(state => ({ ...state, effects: [] }));
+      setState(state => {
+        effects.forEach(fx => fx());
+        return ({ ...state, effects: [] })
+      });
     }
   }, [effects]);
 

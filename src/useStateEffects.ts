@@ -19,7 +19,10 @@ function useStateEffects<S>(initialState: S): [S, Update<S>] {
 
   const setState$: Update<S> = React.useCallback(
     update => setState(({ state, effects }) => {
-      const [state$, ...effects$] = update(state);
+      const [state$, ...pendingEffects] = update(state);
+      const effects$ = pendingEffects.filter(
+        effect => effect && typeof effect === 'function'
+      )
 
       return {
         state: state$,

@@ -1,6 +1,6 @@
 {
   "name": "react-state-effects",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React useState hook enhanced with side effects",
   "main": "dist/useStateEffects.js",
   "types": "dist/useStateEffects.d.ts",

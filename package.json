@@ -2,6 +2,7 @@
   "name": "react-state-effects",
   "version": "1.0.3",
   "description": "React useState hook enhanced with side effects",
+  "repository": "https://github.com/apuchenkin/react-state-effects.git",
   "main": "dist/useStateEffects.js",
   "types": "dist/useStateEffects.d.ts",
   "scripts": {

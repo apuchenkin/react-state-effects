@@ -34,10 +34,13 @@ function useStateEffects<S>(initialState: S): [S, Update<S>] {
 
   React.useEffect(() => {
     if (effects.length > 0) {
-      setState(state => {
+
+      // Delay needed in order to ensure that executed after refs being set
+      setTimeout(() => {
         effects.forEach(fx => fx());
-        return ({ ...state, effects: [] })
-      });
+      })
+
+      setState(state => ({ ...state, effects: [] }));
     }
   }, [effects]);
 

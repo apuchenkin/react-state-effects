@@ -10,7 +10,7 @@
   "types": "dist/useStateEffects.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepublish": "build",
+    "prepublish": "npm run build",
     "test": "jest"
   },
   "keywords": [],

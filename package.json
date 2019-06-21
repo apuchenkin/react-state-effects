@@ -1,6 +1,6 @@
 {
   "name": "react-state-effects",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React useState hook enhanced with side effects",
   "repository": {
     "type": "git",
